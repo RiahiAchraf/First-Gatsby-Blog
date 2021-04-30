@@ -11,6 +11,23 @@ module.exports = {
   },
   /* Your site config here */
   plugins: [
+    // MDX Plugin
+    {
+      resolve: "gatsby-plugin-mdx",
+      options: {
+        defaultLayouts: {
+          default: require.resolve("./src/components/layout.js"),
+        },
+      },
+    },
+    // Gtasby Source File System
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "posts",
+        path: "posts",
+      },
+    },
     // Gatsby Plugin Emotion
     {
       resolve: `gatsby-plugin-emotion`,
