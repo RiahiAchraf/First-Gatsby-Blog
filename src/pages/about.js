@@ -7,7 +7,7 @@ const About = () => {
     <Layout>
       <h1>About</h1>
       <p>This is my About Page</p>
-      <Link to="/">&rarr; Back to home</Link>
+      <Link to="/">&larr; Back to home</Link>
     </Layout>
   );
 };
