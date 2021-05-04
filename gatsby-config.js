@@ -18,6 +18,8 @@ module.exports = {
         defaultLayouts: {
           default: require.resolve("./src/components/layout.js"),
         },
+        gatsbyRemarkPlugins: ["gatsby-remark-images"],
+        plugins: ["gatsby-remark-images"],
       },
     },
     // Gtasby Source File System
@@ -26,6 +28,13 @@ module.exports = {
       options: {
         name: "posts",
         path: "posts",
+      },
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "images",
+        path: "images",
       },
     },
     // Gatsby Plugin Emotion
@@ -40,6 +49,10 @@ module.exports = {
         cssPropOptimization: true,
       },
     },
+    // React Helmet
     `gatsby-plugin-react-helmet`,
+    // Gatsby Sharp
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
   ],
 };
